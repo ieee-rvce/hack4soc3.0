@@ -13,12 +13,14 @@ const TRACKS = [
     icon: "/images/icon-agritech.png",
     problems: [
       {
-        title: "Problem Statement 1: Multi-Office Government Workflow Executor",
-        body: "Design an AI agent that can complete a task requiring interaction with multiple government offices (e.g., certificate correction, license renewal). The agent should plan dependencies, track progress across steps, and handle delays or rejections. It must dynamically adjust its strategy when requirements or outcomes change.",
+        title: "Problem Statement 1: AI Emergency Government Navigator",
+        body: `During emergencies, citizens often struggle to identify the correct helpline, nearby emergency services, or the official procedures required to respond effectively. In high-stress situations such as cybercrime incidents, domestic violence, medical emergencies, or loss of important documents, delays caused by confusion and lack of guidance can worsen outcomes significantly.
+        Design an AI-powered emergency assistance platform that instantly guides users to the appropriate government services, helplines, and emergency response procedures based on their situation. The system should provide fast, multilingual, and context-aware support while helping users navigate government systems efficiently during urgent scenarios.`,
       },
       {
-        title: "Problem Statement 2: AI Legal Aid Chatbot for Tier-2/3 India",
-        body: "A chatbot that answers common legal questions in Kannada, Hindi, or English, citing relevant IPC/CrPC sections. Designed for users in Tier-2 and Tier-3 cities who lack access to affordable legal counsel.",
+        title:
+          "Problem Statement 2: Unified Workforce Compliance and Payroll Automation Platform",
+        body: "Develop an intelligent workforce management and compliance platform for MSMEs and small organizations that simplifies employee data management, payroll operations, and regulatory compliance. The system should reduce the administrative burden of maintaining multiple records, registers, and statutory documents by automatically organizing workforce data into standardized formats required for reporting and audits. The platform should support seamless generation of compliance-ready accounts, registers, and reports across multiple labour and employment regulations while minimizing manual intervention.",
       },
     ],
   },
@@ -32,6 +34,12 @@ const TRACKS = [
         title: "Problem Statement 1: Athlete Recovery System",
         body: "Develop an integrated, data-driven athlete recovery system that monitors physiological indicators and provides personalized recovery recommendations. The system should support multiple stakeholders and enable efficient recovery planning to reduce injury risk and improve performance.",
       },
+      {
+        title:
+          "Problem Statement 2: AI-Powered Clinical Trial Optimization Platform",
+        body: `Clinical trials are critical for validating new medical treatments, but traditional processes often face delays in participant recruitment, inefficient data handling, and challenges in monitoring patient safety and protocol compliance.
+        Develop an AI-powered platform that automates participant screening, analyzes clinical data, monitors trial adherence, and predicts patient risks and outcomes to improve the efficiency, accuracy, and reliability of clinical trials.`,
+      },
     ],
   },
   {
@@ -41,8 +49,15 @@ const TRACKS = [
     icon: "/images/icon-edtech.png",
     problems: [
       {
-        title: "Problem Statement 1: Adaptive Learning Infrastructure for Neurodivergent Students",
+        title:
+          "Problem Statement 1: Adaptive Learning Infrastructure for Neurodivergent Students",
         body: "Develop a foundational curriculum platform that enables educators to upload standard course materials (such as textbooks or syllabi), which are then transformed into sensory-specific learning formats. The system should autonomously reconstruct content into interactive narratives, low-stimulation visual environments, or gamified conceptual models tailored to individual cognitive profiles—including ADHD, Dyslexia, and Autism Spectrum. The objective is to create an adaptive infrastructure that empowers entire school districts to convert traditional, rigid educational resources into a dynamic ecosystem of neuro-inclusive learning experiences.",
+      },
+      {
+        title:
+          "Problem Statement 2: AI Academic Profile and Skill Verification System",
+        body: `Educational and recruitment institutions are struggling to verify student credentials due to a rise in AI-generated resumes, forged certificates, and plagiarized portfolios. These fraudulent practices make manual shortlisting inconsistent, time-consuming, and increasingly unreliable, often leading to the selection of unqualified candidates.
+        To solve this, develop an AI-powered verification platform that analyzes resumes, projects, and certificates to detect suspicious claims and content inconsistencies. By automating the identification of forged documents and AI-generated text, the system enables faster, more reliable preliminary evaluations while maintaining fairness and data privacy.`,
       },
     ],
   },
@@ -54,7 +69,7 @@ const TRACKS = [
     problems: [
       {
         title: "Problem Statement 1: Local-First Personal Privacy Auditor",
-        body: "Build a high-performance, zero-connectivity utility that identifies and maps \"Privacy Debt\"—sensitive personal data and tracking artifacts—stored inadvertently across a user's local filesystem and application databases. The tool must operate without any external API calls or cloud-based processing, ensuring that the audit itself does not become a privacy leak.",
+        body: 'Build a high-performance, zero-connectivity utility that identifies and maps "Privacy Debt"—sensitive personal data and tracking artifacts—stored inadvertently across a user\'s local filesystem and application databases. The tool must operate without any external API calls or cloud-based processing, ensuring that the audit itself does not become a privacy leak.',
       },
     ],
   },
@@ -65,7 +80,8 @@ const TRACKS = [
     icon: "/images/Qualcomm.png",
     problems: [
       {
-        title: "Problem Statement 1: Real-Time On-Device Deepfake Detection and Authenticity Watermarking",
+        title:
+          "Problem Statement 1: Real-Time On-Device Deepfake Detection and Authenticity Watermarking",
         body: "Current deepfake detection methods are primarily cloud-based, post-hoc tools that identify synthetic media only after it has been distributed, which is often too late to prevent harm. To bridge this gap, participants must develop a camera or gallery plugin that utilizes the Snapdragon ISP and NPU pipeline to intercept and analyze frames pre-display. The solution must leverage the QNN SDK to run lightweight, INT4/INT8 quantized detection models at 30 fps directly on the device, ensuring a high-performance, privacy-first architecture that eliminates cloud-based data leaks. Beyond mere detection, the system must embed a cryptographic authenticity watermark into genuine content at the moment of capture to provide a verified trail of media integrity. Selected teams will receive mobile devices with Snapdragon chips on the day of the event for implementation.",
       },
     ],
@@ -88,7 +104,10 @@ export function Tracks() {
   }, [selectedTrack]);
 
   return (
-    <section className="relative overflow-hidden bg-transparent py-32" id="tracks">
+    <section
+      className="relative overflow-hidden bg-transparent py-32"
+      id="tracks"
+    >
       {/* Soft Background Glows */}
       <div className="absolute top-[10%] left-[5%] w-[50vw] h-[50vw] rounded-full bg-[#B2E69F] opacity-20 blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[10%] right-[5%] w-[60vw] h-[60vw] rounded-full bg-[#91D9E7] opacity-20 blur-[120px] pointer-events-none" />
@@ -108,17 +127,22 @@ export function Tracks() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-10%" }}
-                transition={{ duration: 0.6, delay: i * 0.05, type: "spring", stiffness: 80 }}
+                transition={{
+                  duration: 0.6,
+                  delay: i * 0.05,
+                  type: "spring",
+                  stiffness: 80,
+                }}
                 className={cn(
                   "group relative",
-                  isQualcomm ? "md:col-span-2" : ""
+                  isQualcomm ? "md:col-span-2" : "",
                 )}
               >
                 <GlassCard
                   className={cn(
                     "flex flex-col h-full p-8 transition-all duration-300 pointer-events-auto cursor-pointer",
                     "bg-slate-300/40 backdrop-blur-md border border-white/60 shadow-[0_8px_30px_rgba(0,0,0,0.1)]",
-                    "hover:bg-slate-400/50 hover:shadow-[0_15px_40px_rgba(198,243,110,0.4)]"
+                    "hover:bg-slate-400/50 hover:shadow-[0_15px_40px_rgba(198,243,110,0.4)]",
                   )}
                   onClick={() => setSelectedTrack(i)}
                 >
@@ -159,7 +183,7 @@ export function Tracks() {
       <AnimatePresence>
         {selectedTrack !== null && (
           <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-12 md:p-12 pointer-events-auto">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -174,13 +198,13 @@ export function Tracks() {
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto bg-[#F6FFFB] border border-white/60 rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col"
             >
-              <button 
+              <button
                 onClick={() => setSelectedTrack(null)}
                 className="absolute top-6 right-6 h-10 w-10 flex items-center justify-center rounded-full bg-slate-200/50 hover:bg-slate-200 transition-colors text-slate-600"
               >
                 <X size={20} />
               </button>
-              
+
               <div className="flex items-center gap-4 md:gap-6 mb-8 pr-12">
                 <div className="h-14 w-14 md:h-16 md:w-16 flex items-center justify-center shrink-0">
                   <img
@@ -195,10 +219,13 @@ export function Tracks() {
                   </h3>
                 </div>
               </div>
-              
+
               <div className="flex flex-col gap-6">
                 {TRACKS[selectedTrack].problems.map((p, j) => (
-                  <div key={j} className="bg-white/60 rounded-2xl p-6 md:p-8 border border-slate-200/50">
+                  <div
+                    key={j}
+                    className="bg-white/60 rounded-2xl p-6 md:p-8 border border-slate-200/50"
+                  >
                     <h4 className="font-display text-xl font-semibold text-[#3b752b] mb-3">
                       {p.title}
                     </h4>
