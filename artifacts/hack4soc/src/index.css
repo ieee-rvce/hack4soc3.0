@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-brand-lime: var(--brand-lime);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-warm: var(--brand-warm);
+  --color-brand-glass: var(--brand-glass);
+  --color-brand-green: var(--brand-green);
+  --color-brand-forest: var(--brand-forest);
+
+  --font-sans: var(--app-font-sans);
+  --font-display: var(--app-font-display);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --brand-lime: #C6F36E;
+  --brand-deep: #0a0d0b;
+  --brand-warm: #a2b099;
+  --brand-glass: rgba(255, 255, 255, 0.03);
+  --brand-green: #81C76B;
+  --brand-forest: #3b752b;
+
+  --background: 140 13% 5%; /* #0a0d0b */
+  --foreground: 0 0% 100%;
+  
+  --card: 140 10% 8%;
+  --card-foreground: 0 0% 100%;
+  
+  --popover: 140 10% 8%;
+  --popover-foreground: 0 0% 100%;
+  
+  --primary: 76 85% 69%; /* #C6F36E */
+  --primary-foreground: 140 13% 5%;
+  
+  --secondary: 140 10% 12%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 140 10% 15%;
+  --muted-foreground: 140 5% 65%;
+  
+  --accent: 76 85% 69%;
+  --accent-foreground: 140 13% 5%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 140 10% 15%;
+  --input: 140 10% 15%;
+  --ring: 76 85% 69%;
+
+  --app-font-sans: 'Inter', sans-serif;
+  --app-font-display: 'Instrument Serif', serif;
+  
+  --radius: 0.75rem;
+}
+
+.dark {
+  --brand-lime: #C6F36E;
+  --brand-deep: #0a0d0b;
+  --brand-warm: #a2b099;
+  --brand-glass: rgba(255, 255, 255, 0.03);
+  --brand-green: #81C76B;
+  --brand-forest: #3b752b;
+
+  --background: 140 13% 5%; /* #0a0d0b */
+  --foreground: 0 0% 100%;
+  
+  --card: 140 10% 8%;
+  --card-foreground: 0 0% 100%;
+  
+  --popover: 140 10% 8%;
+  --popover-foreground: 0 0% 100%;
+  
+  --primary: 76 85% 69%; /* #C6F36E */
+  --primary-foreground: 140 13% 5%;
+  
+  --secondary: 140 10% 12%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 140 10% 15%;
+  --muted-foreground: 140 5% 65%;
+  
+  --accent: 76 85% 69%;
+  --accent-foreground: 140 13% 5%;
+  
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 140 10% 15%;
+  --input: 140 10% 15%;
+  --ring: 76 85% 69%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.glass-panel {
+  background: var(--brand-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Marquee animation for sponsor strip */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+  display: flex;
+  width: max-content;
+}

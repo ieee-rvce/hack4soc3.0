@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "DPqyFWprn4ee1j6GKKr8n"
+uri = "file://artifacts/hack4soc/public/images/hero-bg.png"
+type = "image"
+title = "cinematic dark green abstract hero"
+
+[[generated]]
+id = "mXl4pOM14YyPIjhmgb2K2"
+uri = "file://artifacts/hack4soc/public/images/icon-agritech.png"
+type = "image"
+title = "agritech monoline icon"
+
+[[generated]]
+id = "bGq9jp15Z-yfyIjW2qNLq"
+uri = "file://artifacts/hack4soc/public/images/icon-legaltech.png"
+type = "image"
+title = "legaltech monoline icon"
+
+[[generated]]
+id = "FxnhmQj-SiiPwKmpHE-MB"
+uri = "file://artifacts/hack4soc/public/images/icon-edtech.png"
+type = "image"
+title = "edtech monoline icon"
+
+[[generated]]
+id = "pHfMpN76CpKLeKgBKBefp"
+uri = "file://artifacts/hack4soc/public/images/icon-greentech.png"
+type = "image"
+title = "greentech monoline icon"
+
+[[generated]]
+id = "Pip7vv6lINeBQ7Kj3LKGy"
+uri = "file://artifacts/hack4soc/public/images/skyline.png"
+type = "image"
+title = "bengaluru skyline silhouette"
+
+[[generated]]
+id = "pID6UguQ2pX7xBTkTFjli"
+uri = "file://artifacts/hack4soc/public/images/cta-bg.png"
+type = "image"
+title = "final cta abstract background"
