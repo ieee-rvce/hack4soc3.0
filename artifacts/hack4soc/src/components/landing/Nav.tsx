@@ -1,9 +1,17 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const MENU_LINKS = [
-  { label: "registration", href: "https://hack2skill.com/hack/hack4soc3" },
+  {
+    label: "registration",
+    href: "https://hack2skill.com/event/hack4soc3?utm_source=hack2skill&utm_medium=homepage",
+  },
   { label: "tracks", href: "#tracks" },
   { label: "timeline", href: "#timeline" },
   { label: "prizes", href: "#prizes" },
@@ -64,7 +72,11 @@ export function Nav() {
               href="#top"
               className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight text-slate-900 md:text-2xl"
             >
-              <img src="/images/Hack4Soc.png" alt="" className="h-10 md:h-14 w-auto object-contain" />
+              <img
+                src="/images/Hack4Soc.png"
+                alt=""
+                className="h-10 md:h-14 w-auto object-contain"
+              />
               <div className="flex items-baseline gap-1">
                 <span>hack4soc</span>
                 <span className="text-[#81C76B]">3.0</span>
@@ -72,10 +84,13 @@ export function Nav() {
             </a>
           </div>
           <div className="pointer-events-auto rounded-full bg-white/60 px-3 py-2 backdrop-blur-md border border-white/30 shadow-sm hidden md:block">
-             <img src="/images/Qualcomm.png" alt="Qualcomm" className="h-8 w-auto object-contain" />
+            <img
+              src="/images/Qualcomm.png"
+              alt="Qualcomm"
+              className="h-8 w-auto object-contain"
+            />
           </div>
         </div>
-        
       </motion.div>
 
       {/* Bullseye trigger — fixed bottom-right on mobile, bottom-center on desktop */}
@@ -91,17 +106,17 @@ export function Nav() {
             className="group fixed bottom-6 left-1/2 z-[60] flex -translate-x-1/2 flex-col items-center gap-1.5 outline-none md:bottom-8"
           >
             <motion.div
-              animate={{ 
+              animate={{
                 rotate: open ? 90 : 0,
                 opacity: open ? 0 : 1,
-                scale: open ? 0.8 : 1
+                scale: open ? 0.8 : 1,
               }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               className="relative h-16 w-16 md:h-20 md:w-20 flex items-center justify-center"
             >
               {/* Glass background */}
               <div className="absolute inset-0 rounded-full bg-slate-900/90 backdrop-blur-md border border-slate-700 shadow-md" />
-              
+
               {/* concentric circles icon */}
               <div className="relative h-full w-full p-2 text-white opacity-90">
                 <BullseyeIcon active={open} />
@@ -150,9 +165,33 @@ function BullseyeIcon({ active }: { active: boolean }) {
   const stroke = active ? "#81C76B" : "#ffffff";
   return (
     <svg viewBox="0 0 48 48" className="h-full w-full">
-      <circle cx="24" cy="24" r="22" fill="none" stroke={stroke} strokeWidth="2" opacity="0.95" />
-      <circle cx="24" cy="24" r="16" fill="none" stroke={stroke} strokeWidth="2" opacity="0.85" />
-      <circle cx="24" cy="24" r="10" fill="none" stroke={stroke} strokeWidth="2" opacity="0.75" />
+      <circle
+        cx="24"
+        cy="24"
+        r="22"
+        fill="none"
+        stroke={stroke}
+        strokeWidth="2"
+        opacity="0.95"
+      />
+      <circle
+        cx="24"
+        cy="24"
+        r="16"
+        fill="none"
+        stroke={stroke}
+        strokeWidth="2"
+        opacity="0.85"
+      />
+      <circle
+        cx="24"
+        cy="24"
+        r="10"
+        fill="none"
+        stroke={stroke}
+        strokeWidth="2"
+        opacity="0.75"
+      />
       <circle cx="24" cy="24" r="4" fill={stroke} />
     </svg>
   );
@@ -224,14 +263,15 @@ function BullseyeMenu({
                     ? "rgba(255,255,255,0.95)"
                     : "rgba(255,255,255,0.35)",
                 backgroundColor: "rgba(10,13,11,0.45)",
-                transition: "border-color 250ms ease, background-color 250ms ease",
+                transition:
+                  "border-color 250ms ease, background-color 250ms ease",
               }}
             >
               {/* Label sits at the top of each ring */}
               <span
                 className={cn(
                   "pointer-events-none mt-[2vmin] select-none font-display text-[clamp(1.3rem,3vmin,3rem)] font-normal leading-none tracking-tight transition-colors duration-200",
-                  isHovered ? "text-brand-lime" : "text-white"
+                  isHovered ? "text-brand-lime" : "text-white",
                 )}
                 style={{
                   textShadow: isHovered

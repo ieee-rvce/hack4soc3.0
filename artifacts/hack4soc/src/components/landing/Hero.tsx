@@ -123,7 +123,7 @@ export function Hero() {
           {/* Primary & Secondary Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-5 flex-wrap">
             <ArrowButton
-              href="https://hack2skill.com/hack/hack4soc3"
+              href="https://hack2skill.com/event/hack4soc3?utm_source=hack2skill&utm_medium=homepage"
               variant="primary"
             >
               Register Now

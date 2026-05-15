@@ -12,42 +12,48 @@ export default function CodeOfConduct() {
             Back to Home
           </a>
         </Link>
-        
-        <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-8">Code of Conduct</h1>
-        
+
+        <h1 className="font-display text-4xl md:text-5xl font-bold text-slate-900 mb-8">
+          Code of Conduct - Hack4Soc 3.0
+        </h1>
+
         <div className="prose prose-slate max-w-none space-y-6">
           <p className="lead text-lg text-slate-600">
-            All participants, mentors, sponsors, and volunteers at Hack4Soc are required to agree with the following code of conduct. Organizers will enforce this code throughout the event. We expect cooperation from all participants to help ensure a safe environment for everybody.
+            All participants, mentors, judges, sponsors, and volunteers are
+            expected to maintain a respectful, inclusive, and professional
+            environment throughout the hackathon.
           </p>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">The Quick Version</h2>
-          <p>
-            Hack4Soc is dedicated to providing a harassment-free hackathon experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. 
-          </p>
-          <p>
-            We do not tolerate harassment of hackathon participants in any form. Sexual language and imagery is not appropriate for any hackathon venue, including hacks, talks, workshops, parties, Twitter, and other online media. Hackathon participants violating these rules may be sanctioned or expelled from the hackathon at the discretion of the hackathon organizers.
-          </p>
+          <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">
+            Participants must:
+          </h2>
+          <ul>
+            <li>Treat everyone with respect and professionalism.</li>
+            <li>Collaborate fairly and ethically.</li>
+            <li>Follow instructions from organizers and volunteers.</li>
+            <li>Respect the venue, equipment, and fellow participants.</li>
+            <li>Ensure all submitted work is original or properly credited.</li>
+          </ul>
 
-          <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">The Less Quick Version</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">
+            The following will not be tolerated:
+          </h2>
+          <ul>
+            <li>Harassment, discrimination, or offensive behaviour.</li>
+            <li>Plagiarism, cheating, or sabotage.</li>
+            <li>Use of inappropriate language or disruptive conduct.</li>
+            <li>Unauthorized access to systems or data.</li>
+            <li>Any activity violating legal or ethical standards.</li>
+          </ul>
+
           <p>
-            Harassment includes offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, technology choices, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention.
+            Teams found violating the rules may face warnings, disqualification,
+            or removal from the event.
           </p>
           <p>
-            Participants asked to stop any harassing behavior are expected to comply immediately.
-          </p>
-          <p>
-            Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.
-          </p>
-          <p>
-            If a participant engages in harassing behavior, the hackathon organizers may take any action they deem appropriate, including warning the offender or expulsion from the hackathon with no refund.
-          </p>
-          
-          <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4">Need Help?</h2>
-          <p>
-            If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of hackathon staff immediately.
-          </p>
-          <p>
-            Hackathon staff will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the hackathon. We value your attendance.
+            By participating in Hack4Soc 3.0, all attendees agree to follow this
+            Code of Conduct and help create a positive hackathon experience for
+            everyone.
           </p>
         </div>
       </div>

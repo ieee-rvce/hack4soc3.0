@@ -40,13 +40,13 @@ export function Footer() {
                 Code of Conduct
               </a>
             </Link>
-            <Link href="/privacy">
+            {/* <Link href="/privacy">
               <a className="hover:text-slate-900 transition-colors">
                 Privacy Policy
               </a>
-            </Link>
+            </Link> */}
             <a
-              href="https://hack2skill.com/hack/hack4soc3"
+              href="https://hack2skill.com/event/hack4soc3?utm_source=hack2skill&utm_medium=homepage"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-slate-900 transition-colors"
