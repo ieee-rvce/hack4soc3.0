@@ -65,12 +65,15 @@ export function Hero() {
           className="max-w-4xl pt-8 md:pt-12 pointer-events-auto"
         >
           <h1 className="font-display text-7xl md:text-8xl lg:text-9xl font-normal leading-[0.85] tracking-tight text-slate-900">
-            Innovate.<br />
-            Impact.<br />
+            Innovate.
+            <br />
+            Impact.
+            <br />
             Inspire.
           </h1>
           <p className="mt-4 md:mt-6 max-w-2xl text-base md:text-lg text-slate-700 leading-relaxed font-light">
-            The flagship hackathon of IEEE Computer Society, RV College of Engineering — building real tech for real societal problems.
+            The flagship hackathon of IEEE Computer Society, RV College of
+            Engineering — building real tech for real societal problems.
           </p>
         </motion.div>
 
@@ -82,18 +85,30 @@ export function Hero() {
           className="mt-6 md:mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 w-full pointer-events-auto"
         >
           <div className="border-l-2 border-[#81C76B]/80 pl-3 py-1">
-            <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Format</p>
-            <p className="text-sm md:text-base text-slate-900 font-semibold">Hybrid</p>
+            <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">
+              Format
+            </p>
+            <p className="text-sm md:text-base text-slate-900 font-semibold">
+              Hybrid
+            </p>
             <p className="text-xs text-slate-600 mt-0.5">Online + Offline</p>
           </div>
           <div className="border-l-2 border-[#81C76B]/80 pl-3 py-1">
-            <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Location</p>
-            <p className="text-sm md:text-base text-slate-900 font-semibold">RVCE</p>
+            <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">
+              Location
+            </p>
+            <p className="text-sm md:text-base text-slate-900 font-semibold">
+              RVCE
+            </p>
             <p className="text-xs text-slate-600 mt-0.5">Bengaluru</p>
           </div>
           <div className="border-l-2 border-[#81C76B]/80 pl-3 py-1">
-            <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">Team</p>
-            <p className="text-sm md:text-base text-slate-900 font-semibold">3-4</p>
+            <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">
+              Team
+            </p>
+            <p className="text-sm md:text-base text-slate-900 font-semibold">
+              3-4
+            </p>
             <p className="text-xs text-slate-600 mt-0.5">Members</p>
           </div>
         </motion.div>
@@ -107,7 +122,10 @@ export function Hero() {
         >
           {/* Primary & Secondary Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 mb-5 flex-wrap">
-            <ArrowButton href="https://hack2skill.com/hack/hack4soc3" variant="primary">
+            <ArrowButton
+              href="https://hack2skill.com/hack/hack4soc3"
+              variant="primary"
+            >
               Register Now
             </ArrowButton>
 
@@ -119,7 +137,7 @@ export function Hero() {
             </a>
 
             <a
-              href="https://hack.ieee-rvce.org/#about"
+              href="https://hack2pointo.ieee-rvce.org/#about"
               target="_blank"
               rel="noopener noreferrer"
               className="group px-6 md:px-8 py-3 md:py-4 border border-slate-900/20 rounded-full text-slate-900 font-semibold text-sm md:text-base transition-all duration-300 hover:border-slate-900/60 hover:bg-slate-900/10"
@@ -127,7 +145,6 @@ export function Hero() {
               Previous Edition
             </a>
           </div>
-
         </motion.div>
       </div>
 
