@@ -1,0 +1,6 @@
+{
+  "framework": "vite",
+  "installCommand": "pnpm -w install",
+  "buildCommand": "pnpm --filter @workspace/hack4soc build",
+  "outputDirectory": "artifacts/hack4soc/dist"
+}
