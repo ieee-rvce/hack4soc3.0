@@ -67,7 +67,7 @@ export function Nav() {
         className="pointer-events-none fixed left-0 right-0 top-0 z-40 flex items-start justify-between px-6 py-6 md:px-10 md:py-8"
       >
         <div className="flex items-center gap-4">
-          <div className="pointer-events-auto rounded-full bg-white/20 px-2 py-1 backdrop-blur-md border border-white/30 shadow-sm">
+          <div className="pointer-events-auto rounded-full bg-white/40 px-3 py-1.5 backdrop-blur-xl border border-white/40 shadow-sm transition-all hover:bg-white/60">
             <a
               href="#top"
               className="flex items-center gap-2 font-display text-xl font-semibold tracking-tight text-slate-900 md:text-2xl"
@@ -83,11 +83,11 @@ export function Nav() {
               </div>
             </a>
           </div>
-          <div className="pointer-events-auto rounded-full bg-white/60 px-3 py-2 backdrop-blur-md border border-white/30 shadow-sm hidden md:block">
+          <div className="pointer-events-auto rounded-full bg-white/60 px-3 py-1.5 md:py-2 backdrop-blur-md border border-white/30 shadow-sm">
             <img
               src="/images/Qualcomm.png"
               alt="Qualcomm"
-              className="h-8 w-auto object-contain"
+              className="h-6 md:h-8 w-auto object-contain"
             />
           </div>
         </div>
@@ -103,7 +103,7 @@ export function Nav() {
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
             onClick={() => setOpen((v) => !v)}
             aria-label={open ? "Close menu" : "Open menu"}
-            className="group fixed bottom-6 left-1/2 z-[60] flex -translate-x-1/2 flex-col items-center gap-1.5 outline-none md:bottom-8"
+            className="group fixed bottom-6 right-6 z-[45] flex flex-col items-center gap-1.5 outline-none md:bottom-8 md:left-1/2 md:right-auto md:-translate-x-1/2"
           >
             <motion.div
               animate={{
@@ -134,7 +134,7 @@ export function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-50 overflow-hidden"
+            className="fixed inset-0 z-[100] overflow-hidden"
           >
             {/* dimmed backdrop with brand image visible behind */}
             <motion.div

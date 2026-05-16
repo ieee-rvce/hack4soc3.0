@@ -5,8 +5,8 @@ import { MicroLabel } from "./primitives/MicroLabel";
 
 // ASCII Art component for background accent - positioned right
 const AsciiBackground = () => (
-  <div className="absolute top-0 right-0 w-full h-full pointer-events-none overflow-hidden flex items-start justify-end pt-12 md:pt-16 pr-4 md:pr-8 lg:pr-16">
-    <pre className="text-[#3b752b]/40 text-[0.5rem] md:text-[0.65rem] lg:text-[0.8rem] leading-tight font-mono whitespace-pre text-right drop-shadow-md">
+  <div className="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-end md:items-start md:justify-end  md:pt-16 pr-4 md:pr-8 lg:pr-16 z-0 opacity-40 md:opacity-60">
+    <pre className="text-[#3b752b] text-[0.45rem] sm:text-[0.5rem] md:text-[0.65rem] lg:text-[0.8rem] leading-tight font-mono whitespace-pre text-left scale-[0.8] sm:scale-100 origin-right md:origin-top-right">
       {`
 ██╗  ██╗ █████╗  ██████╗██╗  ██╗██╗  ██╗ ███████╗ ██████╗  ██████╗
 ██║  ██║██╔══██╗██╔════╝██║ ██╔╝██║  ██║ ██╔════╝██╔═══██╗██╔════╝
@@ -44,6 +44,7 @@ export function Hero() {
 
   return (
     <section className="relative w-full overflow-hidden pt-16 pb-12 flex flex-col justify-between min-h-screen">
+      <AsciiBackground />
       {/* Gradient overlays for depth - Diffused Pastels */}
       <motion.div
         className="pointer-events-none absolute inset-0 z-[1]"
@@ -56,7 +57,6 @@ export function Hero() {
       </motion.div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 md:px-8 lg:px-12 flex flex-col justify-between h-full flex-1 pointer-events-none">
-        <AsciiBackground />
         {/* Main Headline */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -64,7 +64,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="max-w-4xl pt-8 md:pt-12 pointer-events-auto"
         >
-          <h1 className="font-display text-7xl md:text-8xl lg:text-9xl font-normal leading-[0.85] tracking-tight text-slate-900">
+          <h1 className="font-display text-3xl sm:text-6xl md:text-8xl lg:text-9xl font-normal leading-[0.85] tracking-tight text-slate-900">
             Innovate.
             <br />
             Impact.
@@ -82,7 +82,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4 }}
-          className="mt-6 md:mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6 w-full pointer-events-auto"
+          className="mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 w-full pointer-events-auto"
         >
           <div className="border-l-2 border-[#81C76B]/80 pl-3 py-1">
             <p className="text-xs uppercase tracking-widest text-slate-500 font-bold mb-1">
