@@ -40,6 +40,10 @@ const FAQS = [
     q: "When is the deadline for idea submission?",
     a: "The last date to submit your ideas for Phase 1 is May 24, 2026.",
   },
+  {
+    q: "Will accommodation be provided for selected participants?",
+    a: "Accommodation will not be provided outside the duration of the hackathon. However, designated resting zones will be available for participants during the hackathon night. Participants are expected to make their own travel arrangements as well.",
+  },
 ];
 
 export function Faq() {
