@@ -98,7 +98,7 @@ export function Hero() {
               Location
             </p>
             <p className="text-sm md:text-base text-slate-900 font-semibold">
-              RVCE
+              RV COLLEGE OF ENGINEERING
             </p>
             <p className="text-xs text-slate-600 mt-0.5">Bengaluru</p>
           </div>

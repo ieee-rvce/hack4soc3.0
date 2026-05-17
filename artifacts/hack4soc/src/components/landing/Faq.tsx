@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: "What is the team size?",
-    a: "Teams can have 3 to 4 members. All members must be from the same college.",
+    a: "Teams can have 3 to 4 members. All team members need not to be from the same college.",
   },
   {
     q: "How does the hybrid format work?",
